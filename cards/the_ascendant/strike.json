@@ -1,0 +1,12 @@
+{
+    "id": "strike",
+    "name": "Strike",
+    "type": "Attack",
+    "cost": 1,
+    "damage": 6,
+    "block": 0,
+    "description": "Deal 6 damage.",
+    "image_path": "res://assets/images/cards/the_ascendant/strike.svg",
+    "rarity": "Basic",
+    "target": "enemy"
+}

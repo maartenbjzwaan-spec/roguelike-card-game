@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" width="150" height="200">
+  <defs>
+    <linearGradient id="robe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B2020"/>
+      <stop offset="100%" stop-color="#3A0808"/>
+    </linearGradient>
+  </defs>
+  <!-- Body -->
+  <ellipse cx="75" cy="145" rx="38" ry="50" fill="url(#robe)"/>
+  <!-- Head -->
+  <circle cx="75" cy="55" r="25" fill="#C49060"/>
+  <!-- Hood -->
+  <path d="M50,50 Q58,5 75,14 Q92,5 100,50 L95,56 Q75,40 55,56 Z" fill="#6B1010"/>
+  <!-- Glowing red eyes -->
+  <circle cx="66" cy="55" r="5" fill="#FF2222"/>
+  <circle cx="84" cy="55" r="5" fill="#FF2222"/>
+  <!-- Left clawed hand -->
+  <path d="M35,115 L28,105 M35,115 L25,110 M35,115 L30,100" stroke="#8B2020" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right clawed hand -->
+  <path d="M115,115 L122,105 M115,115 L125,110 M115,115 L120,100" stroke="#8B2020" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left arm -->
+  <ellipse cx="38" cy="118" rx="9" ry="22" fill="#6B1010" transform="rotate(-15,38,118)"/>
+  <!-- Right arm -->
+  <ellipse cx="112" cy="118" rx="9" ry="22" fill="#6B1010" transform="rotate(15,112,118)"/>
+  <!-- Name label -->
+  <rect x="10" y="185" width="130" height="14" fill="#300808" rx="3"/>
+  <text x="75" y="196" text-anchor="middle" fill="#FF8888" font-family="sans-serif" font-size="10">Cultist</text>
+</svg>

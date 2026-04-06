@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 200" width="150" height="200">
+  <defs>
+    <linearGradient id="robe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A3080"/>
+      <stop offset="100%" stop-color="#1E1040"/>
+    </linearGradient>
+  </defs>
+  <!-- Body/robe -->
+  <ellipse cx="75" cy="140" rx="40" ry="55" fill="url(#robe)"/>
+  <!-- Head -->
+  <circle cx="75" cy="55" r="28" fill="#D4A882"/>
+  <!-- Hood -->
+  <path d="M47,50 Q55,10 75,18 Q95,10 103,50 L97,55 Q75,42 53,55 Z" fill="#2A1A60"/>
+  <!-- Glowing eyes -->
+  <circle cx="65" cy="55" r="5" fill="#9966FF"/>
+  <circle cx="85" cy="55" r="5" fill="#9966FF"/>
+  <!-- Left arm -->
+  <ellipse cx="40" cy="120" rx="10" ry="25" fill="#2A1A60" transform="rotate(-20,40,120)"/>
+  <!-- Right arm -->
+  <ellipse cx="110" cy="120" rx="10" ry="25" fill="#2A1A60" transform="rotate(20,110,120)"/>
+  <!-- Name label -->
+  <rect x="10" y="185" width="130" height="14" fill="#1A1030" rx="3"/>
+  <text x="75" y="196" text-anchor="middle" fill="#C0A0FF" font-family="sans-serif" font-size="10">The Ascendant</text>
+</svg>

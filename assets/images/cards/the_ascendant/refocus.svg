@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A4A3A"/>
+      <stop offset="100%" stop-color="#0A1E18"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg)" rx="4"/>
+  <!-- Circular arrow (cycle) -->
+  <path d="M50,18 A32,32 0 1,1 20,60" fill="none" stroke="#44DDAA" stroke-width="5" stroke-linecap="round"/>
+  <!-- Arrowhead at end of arc -->
+  <polygon points="14,48 14,68 28,58" fill="#44DDAA"/>
+  <!-- Card icon in center (discard) -->
+  <rect x="38" y="36" width="14" height="20" fill="none" stroke="#AAFFDD" stroke-width="2" rx="2" opacity="0.6"/>
+  <!-- Arrow going out (discard) -->
+  <line x1="45" y1="36" x2="45" y2="24" stroke="#FF8866" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="41,26 49,26 45,18" fill="#FF8866"/>
+  <!-- Card icon (draw) -->
+  <rect x="52" y="44" width="14" height="20" fill="none" stroke="#AAFFDD" stroke-width="2" rx="2" opacity="0.9"/>
+  <!-- Arrow coming in (draw) -->
+  <line x1="59" y1="64" x2="59" y2="76" stroke="#44DDAA" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="55,74 63,74 59,82" fill="#44DDAA"/>
+</svg>

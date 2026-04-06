@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A3A6B"/>
+      <stop offset="100%" stop-color="#0A1A35"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg)" rx="4"/>
+  <!-- Shield shape -->
+  <path d="M50,10 L80,25 L80,55 Q80,80 50,90 Q20,80 20,55 L20,25 Z"
+        fill="#2A5FA0" stroke="#7AABDE" stroke-width="2"/>
+  <!-- Shield highlight -->
+  <path d="M50,18 L72,30 L72,52 Q72,70 50,80"
+        fill="none" stroke="#A0CCFF" stroke-width="1.5" opacity="0.6"/>
+  <!-- Shield cross emblem -->
+  <line x1="50" y1="30" x2="50" y2="68" stroke="#E8E8FF" stroke-width="3"/>
+  <line x1="34" y1="49" x2="66" y2="49" stroke="#E8E8FF" stroke-width="3"/>
+</svg>

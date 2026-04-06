@@ -1,0 +1,14 @@
+{
+    "id": "refocus",
+    "name": "Refocus",
+    "type": "Skill",
+    "cost": 1,
+    "damage": 0,
+    "block": 0,
+    "draw": 1,
+    "discard_random": 1,
+    "description": "Discard a random card. Draw a card.",
+    "image_path": "res://assets/images/cards/the_ascendant/refocus.svg",
+    "rarity": "Common",
+    "target": "self"
+}

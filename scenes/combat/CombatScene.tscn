@@ -1,0 +1,191 @@
+[gd_scene load_steps=9 format=3 uid="uid://combat_scene_001"]
+
+[ext_resource type="Script" path="res://scripts/combat/CombatManager.gd" id="1_combatmgr"]
+[ext_resource type="PackedScene" path="res://scenes/combat/EnemyNode.tscn" id="2_enemynode"]
+[ext_resource type="Texture2D" path="res://assets/images/characters/the_ascendant.svg" id="3_playersp"]
+[ext_resource type="Texture2D" path="res://assets/images/ui/energy_orb_full.svg" id="4_orb_full"]
+[ext_resource type="Texture2D" path="res://assets/images/ui/energy_orb_empty.svg" id="5_orb_empty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_endbtn"]
+bg_color = Color(0.55, 0.15, 0.15, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_energybg"]
+bg_color = Color(0.07, 0.05, 0.18, 0.88)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.22, 0.68, 0.55)
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_handbg"]
+bg_color = Color(0.05, 0.04, 0.12, 0.65)
+
+[node name="CombatScene" type="Node"]
+script = ExtResource("1_combatmgr")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.118, 0.09, 0.188, 1)
+mouse_filter = 2
+
+[node name="BattlefieldLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="PlayerArea" type="Control" parent="BattlefieldLayer"]
+anchor_right = 0.42
+anchor_bottom = 0.78
+offset_left = 20.0
+offset_top = 60.0
+mouse_filter = 2
+
+[node name="PlayerSprite" type="TextureRect" parent="BattlefieldLayer/PlayerArea"]
+anchor_right = 1.0
+anchor_bottom = 0.65
+texture = ExtResource("3_playersp")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PlayerHPBar" type="ProgressBar" parent="BattlefieldLayer/PlayerArea"]
+anchor_top = 0.67
+anchor_bottom = 0.78
+anchor_right = 1.0
+value = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="PlayerHPLabel" type="Label" parent="BattlefieldLayer/PlayerArea"]
+anchor_top = 0.80
+anchor_bottom = 0.90
+anchor_right = 1.0
+text = "HP: 50 / 50"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
+
+[node name="PlayerBlockLabel" type="Label" parent="BattlefieldLayer/PlayerArea"]
+anchor_top = 0.90
+anchor_bottom = 1.0
+anchor_right = 1.0
+text = "Block: 0"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
+
+[node name="EnemyArea" parent="BattlefieldLayer" instance=ExtResource("2_enemynode")]
+anchor_left = 0.56
+anchor_right = 1.0
+anchor_bottom = 0.84
+offset_top = 30.0
+offset_right = -20.0
+
+[node name="EnergyPanel" type="PanelContainer" parent="BattlefieldLayer"]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 148.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_energybg")
+mouse_filter = 2
+
+[node name="EnergyInner" type="VBoxContainer" parent="BattlefieldLayer/EnergyPanel"]
+theme_override_constants/separation = 4
+mouse_filter = 2
+
+[node name="EnergyTitleLabel" type="Label" parent="BattlefieldLayer/EnergyPanel/EnergyInner"]
+text = "ENERGY"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.78, 0.68, 1.0, 1)
+mouse_filter = 2
+
+[node name="OrbRow" type="HBoxContainer" parent="BattlefieldLayer/EnergyPanel/EnergyInner"]
+alignment = 1
+theme_override_constants/separation = 6
+mouse_filter = 2
+
+[node name="EnergyOrb1" type="TextureRect" parent="BattlefieldLayer/EnergyPanel/EnergyInner/OrbRow"]
+custom_minimum_size = Vector2(34, 34)
+texture = ExtResource("4_orb_full")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="EnergyOrb2" type="TextureRect" parent="BattlefieldLayer/EnergyPanel/EnergyInner/OrbRow"]
+custom_minimum_size = Vector2(34, 34)
+texture = ExtResource("4_orb_full")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="EnergyOrb3" type="TextureRect" parent="BattlefieldLayer/EnergyPanel/EnergyInner/OrbRow"]
+custom_minimum_size = Vector2(34, 34)
+texture = ExtResource("4_orb_full")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="TurnLabel" type="Label" parent="BattlefieldLayer"]
+anchor_left = 0.35
+anchor_right = 0.65
+offset_top = 14.0
+offset_bottom = 46.0
+text = "Your Turn"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 18
+
+[node name="EndTurnButton" type="Button" parent="BattlefieldLayer"]
+anchor_left = 0.78
+anchor_right = 0.98
+anchor_top = 0.88
+anchor_bottom = 0.98
+text = "End Turn"
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_endbtn")
+
+[node name="DrawPileButton" type="Button" parent="BattlefieldLayer"]
+anchor_left = 0.01
+anchor_right = 0.11
+anchor_top = 0.88
+anchor_bottom = 0.94
+text = "Draw: 9"
+theme_override_font_sizes/font_size = 12
+
+[node name="DiscardPileButton" type="Button" parent="BattlefieldLayer"]
+anchor_left = 0.01
+anchor_right = 0.11
+anchor_top = 0.94
+anchor_bottom = 1.0
+text = "Discard: 0"
+theme_override_font_sizes/font_size = 12
+
+[node name="HandLayer" type="CanvasLayer" parent="."]
+layer = 1
+
+[node name="HandBackground" type="ColorRect" parent="HandLayer"]
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_top = 0.76
+anchor_bottom = 1.0
+color = Color(0.05, 0.04, 0.12, 0.65)
+mouse_filter = 2
+
+[node name="HandContainer" type="HBoxContainer" parent="HandLayer"]
+anchor_left = 0.08
+anchor_right = 0.92
+anchor_top = 0.77
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="DragLayer" type="CanvasLayer" parent="."]
+layer = 2

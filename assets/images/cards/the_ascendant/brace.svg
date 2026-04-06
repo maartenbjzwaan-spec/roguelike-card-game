@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A2A5A"/>
+      <stop offset="100%" stop-color="#080E28"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#bg)" rx="4"/>
+  <!-- Back shield (next turn, dimmer) -->
+  <path d="M58,18 L82,30 L82,56 Q82,76 58,86 Q34,76 34,56 L34,30 Z"
+        fill="#1A3060" stroke="#4466AA" stroke-width="2" opacity="0.7"/>
+  <!-- Front shield (this turn, brighter) -->
+  <path d="M42,24 L66,36 L66,60 Q66,78 42,88 Q18,78 18,60 L18,36 Z"
+        fill="#2A50A0" stroke="#88AAEE" stroke-width="2.5"/>
+  <!-- Front shield highlight -->
+  <path d="M42,31 L59,40 L59,58 Q59,70 42,78"
+        fill="none" stroke="#AACCFF" stroke-width="1.5" opacity="0.5"/>
+  <!-- "2" on front shield -->
+  <text x="42" y="60" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="20" font-weight="bold">2</text>
+  <!-- "4" on back shield -->
+  <text x="68" y="56" text-anchor="middle" fill="#88AAEE" font-family="sans-serif" font-size="16" font-weight="bold" opacity="0.85">4</text>
+  <!-- Small clock/next-turn indicator -->
+  <circle cx="80" cy="22" r="9" fill="#0A1A40" stroke="#4466AA" stroke-width="1.5"/>
+  <line x1="80" y1="22" x2="80" y2="16" stroke="#88AAEE" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="80" y1="22" x2="84" y2="25" stroke="#88AAEE" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

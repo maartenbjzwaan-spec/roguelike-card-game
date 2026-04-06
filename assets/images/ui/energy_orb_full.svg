@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <radialGradient id="glowRing" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="rgba(160,80,255,0)"/>
+      <stop offset="100%" stop-color="rgba(160,80,255,0.35)"/>
+    </radialGradient>
+    <radialGradient id="orbBody" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#e0c0ff"/>
+      <stop offset="35%" stop-color="#9940f0"/>
+      <stop offset="70%" stop-color="#5510b0"/>
+      <stop offset="100%" stop-color="#1e0050"/>
+    </radialGradient>
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(200,140,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(120,60,220,0)"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer glow ring -->
+  <circle cx="16" cy="16" r="16" fill="url(#glowRing)"/>
+  <!-- Main orb body -->
+  <circle cx="16" cy="16" r="13" fill="url(#orbBody)"/>
+  <!-- Inner energy glow -->
+  <circle cx="16" cy="16" r="9" fill="url(#innerGlow)"/>
+  <!-- Rim highlight -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="rgba(200,150,255,0.65)" stroke-width="1.2"/>
+  <!-- Top shine -->
+  <ellipse cx="12.5" cy="10.5" rx="4.5" ry="2.8" fill="rgba(255,255,255,0.38)"/>
+  <!-- Small sparkle -->
+  <circle cx="21" cy="11" r="1.2" fill="rgba(255,230,255,0.55)"/>
+</svg>

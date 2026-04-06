@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <radialGradient id="emptyBody" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#4a3d5c"/>
+      <stop offset="45%" stop-color="#1e1630"/>
+      <stop offset="100%" stop-color="#0a0814"/>
+    </radialGradient>
+  </defs>
+  <!-- Main orb body (dark/depleted) -->
+  <circle cx="16" cy="16" r="13" fill="url(#emptyBody)"/>
+  <!-- Rim (dim) -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="rgba(100,80,140,0.45)" stroke-width="1.2"/>
+  <!-- Very faint shine -->
+  <ellipse cx="12.5" cy="10.5" rx="4.5" ry="2.8" fill="rgba(255,255,255,0.07)"/>
+</svg>

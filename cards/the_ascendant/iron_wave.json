@@ -1,0 +1,12 @@
+{
+    "id": "iron_wave",
+    "name": "Iron Wave",
+    "type": "Attack",
+    "cost": 1,
+    "damage": 5,
+    "block": 5,
+    "description": "Deal 5 damage.\nGain 5 Block.",
+    "image_path": "res://assets/images/cards/the_ascendant/iron_wave.svg",
+    "rarity": "Common",
+    "target": "enemy"
+}

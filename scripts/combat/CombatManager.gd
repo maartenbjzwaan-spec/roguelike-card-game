@@ -217,9 +217,19 @@ func _on_enemy_died() -> void:
 	is_player_turn = false
 	end_turn_button.disabled = true
 	turn_label.text = "Victory!"
+	GameData.player_current_hp = player_hp
+	get_tree().create_timer(1.2).timeout.connect(_go_to_rewards)
+
+func _go_to_rewards() -> void:
+	get_tree().change_scene_to_file("res://scenes/reward/RewardScreen.tscn")
 
 func _on_player_defeated() -> void:
 	combat_over = true
 	is_player_turn = false
 	end_turn_button.disabled = true
 	turn_label.text = "Defeated!"
+	GameData.player_current_hp = 0
+	get_tree().create_timer(1.5).timeout.connect(_go_to_menu)
+
+func _go_to_menu() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu/MainMenu.tscn")

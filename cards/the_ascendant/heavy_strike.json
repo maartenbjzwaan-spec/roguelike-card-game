@@ -1,0 +1,12 @@
+{
+    "id": "heavy_strike",
+    "name": "Heavy Strike",
+    "type": "Attack",
+    "cost": 2,
+    "damage": 14,
+    "block": 0,
+    "description": "Deal 14 damage.",
+    "image_path": "res://assets/images/cards/the_ascendant/heavy_strike.svg",
+    "rarity": "Uncommon",
+    "target": "enemy"
+}

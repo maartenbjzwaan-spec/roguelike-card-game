@@ -14,7 +14,7 @@ var discard_pile: Array[String] = []
 
 func initialize(deck: Array[String]) -> void:
 	draw_pile = deck.duplicate()
-	draw_pile.shuffle()
+	SeededRandom.shuffle_array(SeededRandom.Stream.CARD_DRAWS, draw_pile)
 	hand.clear()
 	discard_pile.clear()
 
@@ -43,7 +43,7 @@ func play_card(card_id: String) -> void:
 func discard_random_from_hand() -> void:
 	if hand.is_empty():
 		return
-	var idx: int = randi() % hand.size()
+	var idx: int = SeededRandom.randi_range_stream(SeededRandom.Stream.CARD_DRAWS, hand.size())
 	var card_id: String = hand[idx]
 	hand.remove_at(idx)
 	discard_pile.append(card_id)
@@ -59,7 +59,7 @@ func discard_hand() -> void:
 
 func _shuffle_discard_into_draw() -> void:
 	draw_pile = discard_pile.duplicate()
-	draw_pile.shuffle()
+	SeededRandom.shuffle_array(SeededRandom.Stream.CARD_DRAWS, draw_pile)
 	discard_pile.clear()
 	draw_pile_count_changed.emit(draw_pile.size())
 	discard_pile_count_changed.emit(0)

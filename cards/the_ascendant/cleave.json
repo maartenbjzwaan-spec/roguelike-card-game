@@ -1,0 +1,12 @@
+{
+    "id": "cleave",
+    "name": "Cleave",
+    "type": "Attack",
+    "cost": 1,
+    "damage": 8,
+    "block": 0,
+    "description": "Deal 8 damage.",
+    "image_path": "res://assets/images/cards/the_ascendant/cleave.svg",
+    "rarity": "Common",
+    "target": "enemy"
+}
